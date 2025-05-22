@@ -1,0 +1,106 @@
+/* src/components/Habilidades.css */
+.habilidades-section h2 {
+    font-size: 2.8em;
+    margin-bottom: 50px;
+    color: #e0e0e0;
+}
+
+.habilidades-section h2 .fas { /* Estilo para o ícone no título da seção */
+    color: #8c7ae6;
+    margin-left: 15px;
+    font-size: 0.8em;
+}
+
+.habilidades-categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.habilidades-categoria-card {
+  background-color: rgba(36, 38, 59, 0.7); /* Fundo semi-transparente para o card */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.habilidades-categoria-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+  background-color: rgba(43, 46, 74, 0.8);
+}
+
+.habilidades-categoria-card h3 {
+  color: #8c7ae6;
+  font-size: 1.7em;
+  margin-top: 0;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.habilidades-categoria-card h3 .fas { /* Estilo para o ícone da categoria */
+    font-size: 0.9em;
+    color: #e0e0e0;
+}
+
+.habilidades-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.habilidade-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  gap: 15px; /* Espaçamento entre nome, barra e porcentagem */
+}
+
+.habilidade-nome {
+  color: #e0e0e0;
+  font-weight: 500;
+  width: 150px; /* Largura fixa para o nome da habilidade */
+  flex-shrink: 0; /* Não permite que o nome encolha */
+}
+
+.habilidade-nivel-barra {
+  background-color: rgba(140, 122, 230, 0.2); /* Fundo da barra de progresso */
+  height: 10px;
+  border-radius: 5px;
+  flex-grow: 1; /* Ocupa o espaço restante */
+  overflow: hidden;
+  position: relative; /* Para posicionar o progresso */
+}
+
+.habilidade-nivel-progresso {
+  background-color: #8c7ae6; /* Cor do progresso */
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.8s ease-out; /* Animação ao carregar */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.habilidade-nivel-porcentagem {
+  color: #8c7ae6;
+  font-weight: bold;
+  width: 40px; /* Largura fixa para a porcentagem */
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* Responsividade para Habilidades */
+@media (max-width: 768px) {
+    .habilidades-categorias-grid {
+        grid-template-columns: 1fr;
+    }
+    .habilidade-nome {
+        width: 120px;
+    }
+}

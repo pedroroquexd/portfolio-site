@@ -1,0 +1,28 @@
+/* src/App.css */
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ESSENCIAL: Garante que o contêiner principal ocupe a altura total */
+  overflow-x: hidden;
+  /* Opcional, mas pode ajudar a prevenir rolagem vertical extra se o conteúdo for menor que a tela */
+  /* overflow-y: auto; */
+}
+
+main {
+  flex-grow: 1;
+  padding: 0;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+section {
+  padding: 40px 20px;
+  margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,94 @@
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+  align-items: stretch;
+}
+
+.projeto-card {
+  background-color: rgba(36, 38, 59, 0.7);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
+}
+
+.projeto-card h3 {
+  color: #8c7ae6;
+  font-size: 1.8em;
+  margin: 0 0 10px;
+}
+
+.projeto-card p {
+  color: #c0c0c0;
+  font-size: 1em;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 10px; /* Reduzido para aproximar das ferramentas */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.projeto-ferramentas {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.ferramenta-tag {
+  background-color: rgba(140, 122, 230, 0.2);
+  color: #8c7ae6;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 600;
+  border: 1px solid rgba(140, 122, 230, 0.4);
+}
+
+.btn-projeto {
+  display: block;
+  width: 60%; /* Diminuído de 70% */
+  margin: 0 auto;
+  background-color: #8c7ae6;
+  color: white;
+  padding: 4px 12px; /* Diminuído */
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8em; /* Diminuído */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-projeto:hover {
+  background-color: #6a5acd;
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+.btn-projeto .fas {
+  margin-left: 10px;
+}
+
+/* Responsividade para Projetos */
+@media (max-width: 768px) {
+    .projetos-grid {
+        /* ESSENCIAL: Faz com que os cards se empilhem em uma única coluna */
+        grid-template-columns: 1fr;
+    }
+    /* Opcional: Ajustar padding do card em telas menores se estiver muito grande */
+    .projeto-card {
+        padding: 20px;
+    }
+    .projeto-card h3 {
+        font-size: 1.5em;
+    }
+    .projeto-card p {
+        font-size: 0.95em;
+    }
+}

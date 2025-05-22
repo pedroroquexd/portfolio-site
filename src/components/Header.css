@@ -1,0 +1,54 @@
+/* src/components/Header.css */
+.header {
+  background-color: #000000; /* Fundo preto sólido */
+  padding: 15px 0; /* Espaçamento interno */
+  color: white; /* Cor do texto */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); /* Sombra um pouco mais forte para contraste */
+  position: sticky; /* Fixa o cabeçalho no topo ao rolar */
+  top: 0; /* Garante que ele fixe no topo */
+  z-index: 1000; /* Garante que fique acima de outros elementos da página */
+  /* backdrop-filter e -webkit-backdrop-filter foram removidos */
+}
+
+.nav-list {
+  list-style: none; /* Remove marcadores de lista */
+  padding: 0; /* Remove padding padrão da lista */
+  margin: 0; /* Remove margem padrão da lista */
+  display: flex; /* Layout flexível para os itens do menu */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  gap: 40px; /* Espaçamento entre os itens do menu */
+}
+
+.nav-list li a {
+  color: #e0e0e0; /* Cor dos links do menu */
+  font-weight: bold; /* Negrito */
+  padding: 5px 10px; /* Padding para a área clicável */
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Transição suave para hover */
+  text-transform: uppercase; /* Texto em maiúsculas */
+  letter-spacing: 1px; /* Espaçamento entre letras */
+}
+
+.nav-list li a:hover {
+  color: #8c7ae6; /* Cor vibrante no hover */
+  border-bottom: 2px solid #8c7ae6; /* Adiciona uma linha inferior no hover */
+  text-decoration: none; /* Garante que o sublinhado não apareça no hover */
+}
+
+/* Responsividade para o header */
+@media (max-width: 768px) {
+  .nav-list {
+    gap: 15px; /* Reduz o espaçamento em telas menores */
+    /* Opcional: Faz com que os itens quebrem a linha se não couberem */
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os itens se quebrarem a linha */
+    padding: 0 10px; /* Adiciona um pouco de padding nas laterais em telas muito pequenas */
+  }
+  .nav-list li a {
+    font-size: 0.85em; /* Reduz o tamanho da fonte um pouco mais */
+    padding: 3px 8px; /* Reduz o padding do item de menu */
+  }
+  /* Se o header estiver muito alto em mobile, podemos ajustar o padding */
+  .header {
+    padding: 10px 0;
+  }
+}

@@ -1,0 +1,20 @@
+.contato-section ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.contato-section li {
+  margin-bottom: 15px; /* Mais espaço entre os itens */
+  font-size: 1.1em;
+  color: #c0c0c0;
+}
+
+.contato-section a {
+    color: #8c7ae6; /* Cor vibrante para os links de contato */
+    font-weight: bold;
+}
+
+.contato-section a:hover {
+    color: #c8d6e5;
+}

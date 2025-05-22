@@ -1,0 +1,86 @@
+/* src/components/SobreMim.css */
+.sobre-mim-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 100px); /* Ocupa a maior parte da tela, descontando o header/footer */
+  padding: 80px 20px; /* Padding para a seção */
+}
+
+.profile-intro {
+  max-width: 900px; /* Largura máxima do conteúdo */
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4em; /* Tamanho do título principal */
+  margin-bottom: 15px;
+  line-height: 1.2;
+  color: #fff; /* Cor do título */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Sombra suave para o texto */
+}
+
+.highlight-name {
+  color: #8c7ae6; /* Cor de destaque para o nome */
+}
+
+h2 {
+  font-size: 2.5em; /* Tamanho do título secundário (onde a animação aparece) */
+  color: #dcdcdc; /* Cor base para o h2 */
+  min-height: 2.5em; /* Garante espaço suficiente para o texto animado, evitando quebra de layout */
+  display: flex; /* Para centralizar o typed-text-container dentro do h2 */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px; /* Mais espaço abaixo do texto animado */
+}
+
+/* A classe para o texto animado, aplicada ao span que envolve o TypeAnimation */
+.typed-text-container {
+  color: #8c7ae6; /* Cor vibrante para o texto animado */
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(140, 122, 230, 0.4); /* Sombra para o texto animado */
+}
+
+.social-links {
+  margin-top: 40px; /* Mais espaço acima dos links sociais */
+}
+
+.social-links a {
+  display: inline-flex; /* Para alinhar ícone e texto, se você decidir adicionar ícones depois */
+  align-items: center;
+  margin: 0 20px; /* Mais espaço entre os links */
+  font-size: 1.3em; /* Tamanho maior para os links */
+  color: #8c7ae6; /* Cor vibrante para os links sociais */
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Estilos para ícones, caso você adicione Font Awesome posteriormente */
+.social-links a i {
+    margin-left: 8px; /* Espaço entre o texto e o ícone */
+    font-size: 1.1em; /* Tamanho do ícone */
+}
+
+.social-links a:hover {
+  transform: translateY(-8px); /* Efeito de levantar mais acentuado no hover */
+  color: #c8d6e5; /* Cor mais clara no hover */
+}
+
+/* Responsividade para a seção Sobre Mim em telas menores */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  .social-links a {
+    font-size: 1.1em;
+    margin: 0 10px;
+  }
+}
