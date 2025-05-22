@@ -24,7 +24,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/buraco-negro-bg.jpg'); /* Verifique se o caminho da imagem está correto */
+  background-image: url('/black-black.gif'); /* Verifique se o caminho da imagem está correto */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
